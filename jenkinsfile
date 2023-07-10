@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages {
+        stage('Compile Java program') {
+            steps {
+                javac Hello.java
+            }
+        }
+        stage('Run Java Program') {
+            steps {
+                java Hello
+            }
+        }
+    }
+}
